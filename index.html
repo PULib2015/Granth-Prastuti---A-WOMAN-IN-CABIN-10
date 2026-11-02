@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presidency University | GRANTH PRASTUTI </title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --navy: #101b2c;
+    --gold: #c9a45c;
+    --cream: #f7f4ed;
+    --text: #202a38;
+    --muted: #687386;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #e8eaf0;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 35px auto;
+    background: white;
+    box-shadow: 0 12px 45px rgba(0,0,0,.12);
+    overflow: hidden;
+}
+
+/* UNIVERSITY HEADER */
+
+.university-header {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+    border-bottom: 4px solid var(--gold);
+}
+
+.university-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.university-header h2 {
+    font-size: 20px;
+    color: #e5c989;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.edition {
+    display: inline-block;
+    margin-top: 15px;
+    border: 1px solid var(--gold);
+    color: #f1d69d;
+    padding: 5px 18px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* HERO */
+
+.hero {
+    background:
+    linear-gradient(90deg, rgba(9,19,33,.96), rgba(9,19,33,.70)),
+    url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1400')
+    center/cover;
+    color: white;
+    padding: 65px 55px;
+}
+
+.hero-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.15;
+    margin: 18px 0;
+    max-width: 700px;
+}
+
+.hero h2 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #d6dce5;
+    max-width: 650px;
+    font-size: 15px;
+}
+
+.book-meta {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.book-meta span {
+    background: rgba(255,255,255,.12);
+    padding: 8px 14px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* CONTENT */
+
+.content {
+    padding: 45px 55px;
+}
+
+.section-label {
+    color: #a17b35;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    margin-bottom: 18px;
+    color: var(--navy);
+}
+
+.intro {
+    font-size: 15px;
+    color: #4d5868;
+    margin-bottom: 35px;
+}
+
+/* STORY */
+
+.story-box {
+    background: var(--cream);
+    padding: 28px;
+    border-left: 4px solid var(--gold);
+    margin-bottom: 35px;
+}
+
+.story-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.story-box p {
+    font-size: 14px;
+    color: #4e5968;
+    margin-bottom: 12px;
+}
+
+/* KEY THEMES */
+
+.themes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 25px 0 40px;
+}
+
+.theme-card {
+    padding: 22px;
+    background: #f7f8fa;
+    border: 1px solid #e6e8ed;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.theme-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.theme-card .number {
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.theme-card h3 {
+    font-size: 16px;
+    margin: 8px 0;
+    color: var(--navy);
+}
+
+.theme-card p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* LIFE CONNECTION */
+
+.life-section {
+    background: var(--navy);
+    color: white;
+    padding: 38px;
+    margin: 35px 0;
+    border-radius: 5px;
+}
+
+.life-section .section-title {
+    color: white;
+}
+
+.life-section .section-label {
+    color: var(--gold);
+}
+
+.life-point {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    align-items: flex-start;
+}
+
+.life-point .icon {
+    color: var(--gold);
+    font-size: 22px;
+    min-width: 28px;
+}
+
+.life-point h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.life-point p {
+    font-size: 15px;
+    color: #cbd3df;
+}
+
+/* STUDENT REFLECTION */
+
+.reflection {
+    padding: 30px;
+    background: #f5f0e5;
+    border-radius: 5px;
+    margin: 35px 0;
+}
+
+.reflection h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.reflection p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* QUOTE */
+
+.quote {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 30px 0;
+}
+
+.quote h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-style: italic;
+    color: var(--navy);
+}
+
+.quote p {
+    color: #a17b35;
+    font-size: 12px;
+    margin-top: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* CALL TO ACTION */
+
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f7f8fa;
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 16px;
+    color: var(--muted);
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+.footer h3 {
+    color: var(--gold);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    font-size: 17px;
+    color: #b9c1ce;
+    margin-top: 6px;
+}
+
+/* BUTTONS */
+
+.actions {
+    text-align: center;
+    margin: 20px auto 35px;
+}
+
+.actions button {
+    padding: 12px 22px;
+    border: none;
+    background: var(--navy);
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.actions button:hover {
+    background: #a17b35;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:650px) {
+    .container {
+        margin: 0;
+    }
+
+    .university-header h1 {
+        font-size: 21px;
+    }
+
+    .hero {
+        padding: 45px 25px;
+    }
+
+    .content {
+        padding: 30px 22px;
+    }
+
+    .themes {
+        grid-template-columns: 1fr;
+    }
+
+    .life-section {
+        padding: 25px 20px;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .theme-card:hover {
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- UNIVERSITY HEADER -->
+
+    <header class="university-header">
+        <h1>PRESIDENCY UNIVERSITY</h1>
+        <h2>Library Knowledge Resource Center</h2>
+        <div class="edition">
+           <b> GRANTH PRASTUTI  &nbsp; | &nbsp; VOL. 1 &nbsp; ISSUE 5</b> 
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+        <div class="hero-label">The Mystery Collection</div>
+
+        <h2>A WOMAN<br>IN <span>CABIN 10</span></h2>
+
+        <p>
+            One mysterious disappearance. An empty cabin.
+            A ship full of secrets. What happens when nobody
+            believes the truth you witnessed?
+        </p>
+
+        <div class="book-meta">
+            <span>AUTHOR: RUTH WARE</span>
+            <span>YEAR: 2016</span>
+            <span>GENRE: PSYCHOLOGICAL THRILLER</span>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+
+    <main class="content">
+
+        <div class="section-label">01 / Book Introduction</div>
+
+        <h2 class="section-title">A Journey Into Fear and Suspense</h2>
+
+        <p class="intro">
+           <b>  What if you witnessed something terrible, but nobody
+            believed you? What if the evidence disappeared and
+            everyone around you insisted that you were wrong?
+
+            <strong>A Woman in Cabin 10</strong>, written by British
+            author Ruth Ware, is a gripping psychological thriller
+            that takes readers into a world of secrets, fear,
+            deception and unexpected danger.
+
+            Set aboard a luxurious cruise ship travelling through
+            the cold Norwegian waters, the novel keeps readers
+            questioning what is real and who can be trusted.  </b>
+        </p>
+
+        <!-- STORY -->
+
+        <div class="section-label">02 / The Story</div>
+        <h2 class="section-title">What Happens on Cabin 10?</h2>
+
+        <div class="story-box">
+
+            <h3>A Dream Assignment Turns Into a Nightmare</h3>
+
+            <p>
+                <b> Laura "Lo" Blacklock is a travel journalist who
+                receives an exciting opportunity to travel aboard
+                the luxurious cruise ship Aurora.</b> 
+            </p>
+
+            <p>
+                <b> But her dream assignment takes a terrifying turn
+                when she witnesses someone falling overboard from
+                the neighbouring Cabin 10 during a stormy night.
+            </p> </b> 
+
+            <p>
+           <b>      When she reports the incident, nobody believes her.
+                The passenger list shows that Cabin 10 was empty.
+                There is no missing passenger and no evidence of
+                anyone having stayed there.</b> 
+            </p>
+
+            <p>
+              <b>   Determined to discover the truth, Lo begins her
+                own investigation. As she searches for answers,
+                strange events, hidden secrets and dangerous
+                threats begin to surround her. </b> 
+            </p>
+
+            <p>
+            <b>     With nowhere to escape in the middle of the sea,
+                Lo must discover whom she can trust before it
+                is too late.</b> 
+            </p>
+
+        </div>
+
+        <!-- THEMES -->
+
+        <div class="section-label">03 / Major Themes</div>
+        <h2 class="section-title">What Makes This Book Interesting?</h2>
+
+        <div class="themes">
+
+            <div class="theme-card">
+                <div class="number">01</div>
+                <h3>Psychological Suspense</h3>
+                <p>
+                    <b> The story makes readers question reality,
+                    memory and the truth behind every incident.</b>
+                </p>
+            </div>
+
+            <div class="theme-card">
+                <div class="number">02</div>
+                <h3>Trust and Betrayal</h3>
+                <p>
+                  <b>  People who appear trustworthy may hide
+                    secrets. The story explores the difficulty
+                    of knowing whom to believe. .</b>
+                </p>
+            </div>
+
+            <div class="theme-card">
+                <div class="number">03</div>
+                <h3>Fear and Survival</h3>
+                <p>
+                   <b> Lo faces frightening situations and must
+                    find the courage to protect herself.</b>
+                </p>
+            </div>
+
+            <div class="theme-card">
+                <div class="number">04</div>
+                <h3>Truth and Deception</h3>
+                <p>
+                 <b>   The novel explores how lies, manipulation
+                    and hidden identities can influence people.</b>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- REAL LIFE CONNECTION -->
+
+        <section class="life-section">
+
+            <div class="section-label">04 / Beyond the Pages</div>
+
+            <h2 class="section-title">
+                Lessons We Can Connect to Real Life
+            </h2>
+
+            <div class="life-point">
+                <div class="icon">✦</div>
+                <div>
+                    <h3>1. Believe in Yourself</h3>
+                    <p>
+                        Sometimes people may doubt your words.
+                        Do not lose confidence. Think clearly
+                        and look for facts.
+                    </p>
+                </div>
+            </div>
+
+            <div class="life-point">
+                <div class="icon">✦</div>
+                <div>
+                    <h3>2. Mental Health Matters</h3>
+                    <p>
+                        Stress, anxiety and emotional struggles
+                        should never be reasons to disrespect
+                        or dismiss someone.
+                    </p>
+                </div>
+            </div>
+
+            <div class="life-point">
+                <div class="icon">✦</div>
+                <div>
+                    <h3>3. Think Before You Trust</h3>
+                    <p>
+                        Not everyone who smiles at you has
+                        good intentions. Build trust through
+                        actions, honesty and consistency.
+                    </p>
+                </div>
+            </div>
+
+            <div class="life-point">
+                <div class="icon">✦</div>
+                <div>
+                    <h3>4. Courage Is Important</h3>
+                    <p>
+                        Facing difficult situations requires
+                        courage. Speaking up when something
+                        is wrong can make a difference.
+                    </p>
+                </div>
+            </div>
+
+            <div class="life-point">
+                <div class="icon">✦</div>
+                <div>
+                    <h3>5. Never Stop Asking Questions</h3>
+                    <p>
+                        Curiosity helps us learn. Asking the
+                        right questions and examining evidence
+                        can help us understand the truth.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- REFLECTION -->
+
+        <div class="reflection">
+
+            <div class="section-label">05 / Think About It</div>
+
+            <h3>Questions for Every Reader</h3>
+
+            <p>
+                <strong>01.</strong> <b> Have you ever experienced
+                a situation where nobody believed your side
+                of the story? </b> 
+            </p>
+
+            <p>
+                <strong>02.</strong><b> How would you react if
+                everyone denied something you had personally
+                witnessed?</b> 
+            </p>
+
+            <p>
+                <strong>03.</strong><b>  Is it always easy to
+                distinguish between truth and deception?</b> 
+            </p> 
+
+            <p>
+                <strong>04.</strong> <b> What is more important
+                during difficult situations: courage,
+                patience or logical thinking?</b> 
+            </p>
+
+        </div>
+
+        <!-- CLOSING QUOTE -->
+
+        <div class="quote">
+            <h2>
+                "Sometimes, the greatest mystery is not
+                what happened, but why nobody believes you."
+            </h2>
+            <p>A READER'S REFLECTION</p>
+        </div>
+
+    </main>
+
+    <!-- CALL TO ACTION -->
+
+    <section class="cta">
+        <h2>Ready to Uncover the Mystery?</h2>
+
+        <p>
+         <b>   Step aboard the Aurora. Follow the clues.
+            Question everything. Discover the story for yourself.
+        </p>
+
+        <p style="margin-top:15px;font-weight:700;color:#a17b35;">
+            PICK UP A BOOK. OPEN A NEW WORLD.</b>
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <h3>PRESIDENCY UNIVERSITY</h3>
+
+        <p><b>LIBRARY KNOWLEDGE RESOURCE CENTER</b></p>
+
+        <p>
+           <b> Promoting Reading Culture | Building Knowledge |
+            Inspiring Young Minds</b>
+        </p>
+
+        <p style="margin-top:15px;">
+            <b>VOL. 1 | ISSUE 5 | GRANTH PRASTUTI</b>
+        </p>
+    </footer>
+
+</div>
+
+<!-- ACTION BUTTONS -->
+
+<div class="actions">
+    <button onclick="window.print()">Print / Save as PDF</button>
+    
+</div>
+
+<script>
+
+function shareContent() {
+
+    const shareData = {
+        title: "A Woman in Cabin 10 | Library Book Spotlight",
+        text: "Discover A Woman in Cabin 10 by Ruth Ware – a thrilling journey of mystery, suspense and survival. Presented by Presidency University Library Knowledge Resource Center."
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData);
+    } else {
+        navigator.clipboard.writeText(
+            shareData.title + "\n" + shareData.text
+        ).then(() => {
+            alert("Book spotlight text copied successfully!");
+        });
+    }
+
+}
+
+</script>
+
+</body>
+</html>
